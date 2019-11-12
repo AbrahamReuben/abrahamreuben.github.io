@@ -1,4 +1,43 @@
-<html>
-<head>A little more</head>
-<body>Just a little more</body>
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <!-- Navigation -->
+        <nav class="w3-bar w3-black">
+            <a href="index.html" class="w3-button w3-bar-item">Home</a>
+            <a href="https://github.com/AbrahamReuben" class="w3-button w3-bar-item">GIT</a>
+            <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
+        </nav>
+        <div class="gallery">
+            <div class="gallery-image">
+                <img class="mySlides" src="media/I2429.jpg" style="width:100%">
+                <img class="mySlides" src="media/I6176.jpg" style="width:100%">
+                <div class="gallery-text">
+                    <h3><i>I see world in 1's and 0's</i></h3>                  
+                </div>    
+            </div>  
+        </div>
+        <!-- Description -->
+        <section class="w3-container w3-center w3-content" style="max-width:600px">
+            <h2 class="w3-wide">abrahamreuben.github.io</h2>
+        </section>
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 30000);
+            }
+        </script>
+    </body>
 </html>
